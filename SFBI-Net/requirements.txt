@@ -1,0 +1,14 @@
+einops==0.7.0
+grad_cam==1.4.8
+matplotlib==3.6.0
+numpy==1.23.5
+opencv_python==4.5.4.58
+Pillow==10.2.0
+scipy==1.9.1
+tifffile==2023.2.3
+timm==0.4.12
+torch==1.12.1
+torchvision==0.13.1
+tqdm==4.64.1
+ttach==0.0.3
+wandb==0.13.5
