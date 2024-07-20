@@ -105,7 +105,7 @@ sh script/eval_SFBI-Net.sh
 
 ### Copyright
 
-The project has been licensed by Apache-2.0. Please refer to for details. [LICENSE.txt](https://github.com/Mryao-yuan/SFBI-Net/LICENSE.txt)
+The project has been licensed by Apache-2.0. Please refer to for details. [LICENSE.txt](./LICENSE)
 
 ### Thanks
 
