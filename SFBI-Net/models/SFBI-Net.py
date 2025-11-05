@@ -352,7 +352,7 @@ class decoder(nn.Module):
         else:
             return [out]
 
-class SFBIN(nn.Module):
+class SFBI-Net(nn.Module):
     def __init__(self,class_n=2,backbone='resnet18',output_sigmoid=False,
                  resnet_stages_num=5, dim=[64,128,256,512],num_heads=8,fusion_policy='concat'):
         super(SFBIN,self).__init__()
