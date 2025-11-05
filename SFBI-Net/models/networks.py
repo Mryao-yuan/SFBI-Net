@@ -9,7 +9,7 @@ import functools
 ########## compare ############
 import models
 
-from models.SFBIN import SFBIN
+from models.SFBI-Net import SFBI-Net
 
 ###############################################################################
 # Helper Functions
