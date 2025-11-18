@@ -196,20 +196,19 @@ class SFD_Loss(nn.Module):
         branch_v = branch
         att = F.softmax(torch.bmm(branch_q,branch_k),dim=2)
         branch = torch.bmm(att,branch_v)
-        # softmax on spatial dim
+        
         branch = F.softmax(branch,2)
         # b,c,hw -> b,c,h,w
-        branch = branch.reshape(x.size(0),x.size(2), x.size(3), x.size(1))
-        # Cross-channel Max Pooling calculates the max value of different class
+        branch = branch.reshape(branch.size(0),branch.size(1), x.size(2), x.size(2))
+        
         branch = self.max_pooling(branch)
-        branch = branch.permute(0,3,1,2)
+        # branch = branch.permute(0,3,1,2)
         branch = F.max_pool2d(branch, kernel_size=3, stride=1, padding=1)
         # b,c,h,w -> b,c,hw
         branch = branch.reshape(branch.size(0),branch.size(1), branch.size(2) * branch.size(3))
         # avg of each class
         sfd_loss = 1.0 - 1.0*torch.mean(torch.sum(branch,2))/self.OneClassChannelNum
         return sfd_loss
-    
 
 
 
